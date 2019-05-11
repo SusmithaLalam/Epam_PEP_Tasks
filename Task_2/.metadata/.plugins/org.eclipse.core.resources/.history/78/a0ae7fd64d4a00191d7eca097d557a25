@@ -1,0 +1,29 @@
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+/**
+ * 
+ * @author prudhvir3ddy
+ *
+ */
+class SimpleIntrestAndCompoundIntrestTest {
+
+	@Test
+	void testSimpleIntrest() {
+		CompoundInterest simpleIntrest;
+		simpleIntrest = new CompoundInterest(1200, 5.4f, 2);
+		assertEquals(129.6, simpleIntrest.getSimpleInterest());
+		simpleIntrest = new CompoundInterest(1200, 5.4f, 2);
+		assertEquals(228.21, simpleIntrest.getSimpleInterest());
+	}
+	
+	@Test
+	void testCompoundIntrest() {
+		CompoundInterest compoundIntrest;
+		compoundIntrest = new CompoundInterest(1200, 5.4f, 2);
+		assertEquals(1333.099243, compoundIntrest.getCompoundInterest());
+		compoundIntrest = new CompoundInterest(1200, 5.4f, 2);
+		assertEquals(2826.96182, compoundIntrest.getCompoundInterest());
+	}
+
+}
